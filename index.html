@@ -1,0 +1,2525 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>무냐무냐 | 5월 가정의 달 기획전 — 5월의 첫 포옹</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --yellow: #F5C200;
+      --yellow-light: #FFF8D6;
+      --yellow-mid: #FAE06A;
+      --cream: #FDFAF3;
+      --beige: #F5EDD8;
+      --beige-dark: #E8D9B8;
+      --green: #8BAF7A;
+      --green-light: #D4E8CB;
+      --blue: #A8C5DA;
+      --blue-light: #DFF0F8;
+      --brown: #7A6248;
+      --brown-light: #C4A882;
+      --text-dark: #2C2118;
+      --text-mid: #5C4A36;
+      --text-light: #9C8B7A;
+      --white: #FFFFFF;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: var(--cream);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--beige-dark);
+      padding: 16px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+
+    .logo-crown {
+      width: 28px;
+      height: 28px;
+      fill: var(--yellow);
+    }
+
+    .logo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: var(--text-dark);
+      text-transform: uppercase;
+    }
+
+    .header-nav {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .header-nav a {
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--text-mid);
+      letter-spacing: 1px;
+      transition: color 0.2s;
+    }
+
+    .header-nav a:hover {
+      color: var(--yellow);
+    }
+
+    .header-badge {
+      background-color: var(--yellow);
+      color: var(--text-dark);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #FFF8D6 0%, #F5EDD8 40%, #E8D9B8 100%);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-bg-pattern {
+      position: absolute;
+      inset: 0;
+      opacity: 0.06;
+      background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%237A6248' fill-opacity='1'%3E%3Cpath d='M40 0C17.9 0 0 17.9 0 40s17.9 40 40 40 40-17.9 40-40S62.1 0 40 0zm0 72C22.3 72 8 57.7 8 40S22.3 8 40 8s32 14.3 32 32-14.3 32-32 32z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .hero-deco-left {
+      position: absolute;
+      left: -60px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245,194,0,0.15) 0%, transparent 70%);
+    }
+
+    .hero-deco-right {
+      position: absolute;
+      right: -80px;
+      bottom: 10%;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(139,175,122,0.12) 0%, transparent 70%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 120px 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .hero-text {
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background-color: var(--yellow);
+      color: var(--text-dark);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 28px;
+      text-transform: uppercase;
+    }
+
+    .hero-title-en {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 72px;
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+      letter-spacing: -1px;
+    }
+
+    .hero-title-en em {
+      font-style: italic;
+      color: var(--brown);
+    }
+
+    .hero-title-kr {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--text-mid);
+      margin-bottom: 32px;
+      letter-spacing: 1px;
+    }
+
+    .hero-desc {
+      font-size: 15px;
+      line-height: 1.9;
+      color: var(--text-mid);
+      margin-bottom: 40px;
+      max-width: 440px;
+    }
+
+    .hero-period {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .hero-period-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--text-light);
+      text-transform: uppercase;
+    }
+
+    .hero-period-date {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--text-dark);
+      letter-spacing: 1px;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background-color: var(--text-dark);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      padding: 16px 36px;
+      border-radius: 2px;
+      transition: all 0.3s;
+      text-transform: uppercase;
+    }
+
+    .hero-cta:hover {
+      background-color: var(--yellow);
+      color: var(--text-dark);
+    }
+
+    .hero-cta-arrow {
+      font-size: 18px;
+      transition: transform 0.3s;
+    }
+
+    .hero-cta:hover .hero-cta-arrow {
+      transform: translateX(4px);
+    }
+
+    .hero-image-wrap {
+      position: relative;
+      animation: fadeInRight 1.2s ease forwards;
+    }
+
+    .hero-image-frame {
+      position: relative;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 40px 80px rgba(122,98,72,0.2);
+    }
+
+    .hero-image-frame img {
+      width: 100%;
+      height: 580px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-image-badge {
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      background-color: var(--yellow);
+      padding: 20px 24px;
+      border-radius: 4px;
+      box-shadow: 0 8px 24px rgba(245,194,0,0.3);
+    }
+
+    .hero-image-badge-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-dark);
+      letter-spacing: 1px;
+    }
+
+    .hero-image-badge-sub {
+      font-size: 11px;
+      color: var(--text-mid);
+      margin-top: 2px;
+    }
+
+    /* ===== INTRO SECTION ===== */
+    .intro {
+      background-color: var(--white);
+      padding: 120px 60px;
+    }
+
+    .intro-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: var(--text-light);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--text-dark);
+      margin-bottom: 28px;
+    }
+
+    .section-title em {
+      color: var(--brown);
+      font-style: normal;
+    }
+
+    .section-divider {
+      width: 40px;
+      height: 2px;
+      background-color: var(--yellow);
+      margin: 0 auto 32px;
+    }
+
+    .intro-text {
+      font-size: 16px;
+      line-height: 2;
+      color: var(--text-mid);
+      max-width: 680px;
+      margin: 0 auto 60px;
+    }
+
+    .intro-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 60px;
+    }
+
+    .intro-card {
+      background-color: var(--cream);
+      border: 1px solid var(--beige-dark);
+      border-radius: 4px;
+      padding: 40px 28px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .intro-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(122,98,72,0.1);
+      border-color: var(--yellow);
+    }
+
+    .intro-card-icon {
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+
+    .intro-card-date {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--brown);
+      margin-bottom: 8px;
+    }
+
+    .intro-card-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+    }
+
+    .intro-card-desc {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--text-light);
+    }
+
+    /* ===== BENEFIT SECTION ===== */
+    .benefit {
+      background: linear-gradient(180deg, var(--beige) 0%, var(--cream) 100%);
+      padding: 120px 60px;
+    }
+
+    .benefit-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .benefit-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+
+    .benefit-card {
+      background-color: var(--white);
+      border-radius: 4px;
+      padding: 48px 40px;
+      display: flex;
+      gap: 28px;
+      align-items: flex-start;
+      border: 1px solid var(--beige-dark);
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .benefit-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--yellow), var(--brown-light));
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+
+    .benefit-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .benefit-card:hover {
+      box-shadow: 0 16px 48px rgba(122,98,72,0.1);
+      transform: translateY(-2px);
+    }
+
+    .benefit-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 52px;
+      font-weight: 300;
+      color: var(--yellow);
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: -4px;
+    }
+
+    .benefit-content {}
+
+    .benefit-tag {
+      display: inline-block;
+      background-color: var(--yellow-light);
+      color: var(--brown);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      padding: 4px 10px;
+      border-radius: 2px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .benefit-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    .benefit-desc {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--text-mid);
+      margin-bottom: 16px;
+    }
+
+    .benefit-detail {
+      font-size: 13px;
+      color: var(--text-light);
+      line-height: 1.7;
+      border-top: 1px solid var(--beige-dark);
+      padding-top: 16px;
+    }
+
+    .benefit-highlight {
+      background-color: var(--yellow-light);
+      border: 1px solid var(--yellow-mid);
+      border-radius: 4px;
+      padding: 24px 32px;
+      text-align: center;
+      grid-column: 1 / -1;
+    }
+
+    .benefit-highlight-text {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+
+    .benefit-highlight-sub {
+      font-size: 14px;
+      color: var(--text-mid);
+    }
+
+    /* ===== PRODUCTS SECTION ===== */
+    .products {
+      background-color: var(--white);
+      padding: 120px 60px;
+    }
+
+    .products-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .products-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    /* ===== TAB FILTER ===== */
+    .series-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 56px;
+    }
+
+    .series-tab {
+      display: inline-block;
+      padding: 10px 22px;
+      border: 1.5px solid var(--beige-dark);
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-mid);
+      background: var(--white);
+      cursor: pointer;
+      transition: all 0.25s;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .series-tab:hover {
+      border-color: var(--brown-light);
+      color: var(--text-dark);
+      background: var(--cream);
+    }
+
+    .series-tab.active {
+      background: var(--text-dark);
+      border-color: var(--text-dark);
+      color: var(--white);
+      font-weight: 700;
+    }
+
+    /* ===== PRODUCT GRID ===== */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+    }
+
+    .series-panel {
+      display: none;
+    }
+
+    .series-panel.active {
+      display: contents;
+    }
+
+    .product-card {
+      position: relative;
+      border-radius: 4px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.4s;
+      background: var(--white);
+      border: 1px solid var(--beige-dark);
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 60px rgba(122,98,72,0.15);
+    }
+
+    .product-image {
+      position: relative;
+      overflow: hidden;
+      background-color: var(--cream);
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s;
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.04);
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background-color: var(--text-dark);
+      color: var(--white);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      padding: 4px 10px;
+      border-radius: 2px;
+      text-transform: uppercase;
+    }
+
+    .product-badge.gift {
+      background-color: var(--yellow);
+      color: var(--text-dark);
+    }
+
+    .product-badge.family {
+      background-color: var(--green);
+      color: var(--white);
+    }
+
+    .product-badge.new {
+      background-color: var(--blue);
+      color: var(--text-dark);
+    }
+
+    .product-badge.silk {
+      background-color: #C9A87C;
+      color: var(--white);
+    }
+
+    .product-info {
+      padding: 16px 18px 20px;
+      background-color: var(--white);
+    }
+
+    .product-category {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--text-light);
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .product-name {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-dark);
+      margin-bottom: 5px;
+      line-height: 1.45;
+    }
+
+    .product-desc {
+      font-size: 12px;
+      color: var(--text-light);
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .product-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--text-dark);
+    }
+
+    .product-price-note {
+      font-size: 11px;
+      color: var(--green);
+      font-weight: 600;
+      margin-left: 6px;
+    }
+
+    .product-buy-btn {
+      display: block;
+      margin-top: 12px;
+      padding: 9px 0;
+      background: var(--text-dark);
+      color: var(--white);
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+
+    .product-buy-btn:hover {
+      background: var(--brown);
+    }
+
+    /* ===== WHY SECTION ===== */
+    .why {
+      background: linear-gradient(135deg, var(--text-dark) 0%, #3D2E1E 100%);
+      padding: 120px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .why::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245,194,0,0.08) 0%, transparent 70%);
+    }
+
+    .why-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .why-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .why-header .section-label {
+      color: var(--yellow-mid);
+    }
+
+    .why-header .section-title {
+      color: var(--white);
+    }
+
+    .why-header .section-divider {
+      background-color: var(--yellow);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    .why-card {
+      text-align: center;
+      padding: 48px 32px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+
+    .why-card:hover {
+      background-color: rgba(255,255,255,0.05);
+      border-color: var(--yellow);
+    }
+
+    .why-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 64px;
+      font-weight: 300;
+      color: var(--yellow);
+      line-height: 1;
+      margin-bottom: 20px;
+      opacity: 0.6;
+    }
+
+    .why-icon {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .why-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--white);
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .why-desc {
+      font-size: 14px;
+      line-height: 1.9;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* ===== MARKETING SECTION ===== */
+    .marketing {
+      background-color: var(--cream);
+      padding: 120px 60px;
+    }
+
+    .marketing-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .marketing-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .marketing-timeline {
+      position: relative;
+      margin-bottom: 80px;
+    }
+
+    .marketing-timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(180deg, var(--yellow) 0%, var(--beige-dark) 100%);
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 1fr 60px 1fr;
+      gap: 0;
+      margin-bottom: 48px;
+      align-items: center;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+      grid-column: 1;
+      text-align: right;
+      padding-right: 40px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-empty {
+      grid-column: 3;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+      grid-column: 3;
+      text-align: left;
+      padding-left: 40px;
+    }
+
+    .timeline-item:nth-child(even) .timeline-empty {
+      grid-column: 1;
+    }
+
+    .timeline-dot {
+      grid-column: 2;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: var(--yellow);
+      border: 3px solid var(--white);
+      box-shadow: 0 0 0 2px var(--yellow);
+      margin: 0 auto;
+      flex-shrink: 0;
+    }
+
+    .timeline-content {
+      background-color: var(--white);
+      border: 1px solid var(--beige-dark);
+      border-radius: 4px;
+      padding: 28px 32px;
+      transition: all 0.3s;
+    }
+
+    .timeline-content:hover {
+      border-color: var(--yellow);
+      box-shadow: 0 8px 24px rgba(245,194,0,0.1);
+    }
+
+    .timeline-date {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--brown);
+      margin-bottom: 8px;
+    }
+
+    .timeline-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+
+    .timeline-desc {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--text-light);
+    }
+
+    .marketing-channels {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 60px;
+    }
+
+    .channel-card {
+      background-color: var(--white);
+      border: 1px solid var(--beige-dark);
+      border-radius: 4px;
+      padding: 36px 28px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .channel-card:hover {
+      border-color: var(--yellow);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(245,194,0,0.12);
+    }
+
+    .channel-icon {
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+
+    .channel-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+    }
+
+    .channel-desc {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--text-light);
+      margin-bottom: 16px;
+    }
+
+    .channel-kpi {
+      display: inline-block;
+      background-color: var(--yellow-light);
+      color: var(--brown);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    /* ===== CLOSING SECTION ===== */
+    .closing {
+      background: linear-gradient(135deg, var(--beige) 0%, #E8D9B8 100%);
+      padding: 120px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .closing::before {
+      content: '"';
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 300px;
+      color: rgba(122,98,72,0.05);
+      line-height: 1;
+    }
+
+    .closing-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .closing-from {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: var(--text-light);
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+
+    .closing-quote {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.9;
+      color: var(--text-dark);
+      margin-bottom: 40px;
+    }
+
+    .closing-quote em {
+      color: var(--brown);
+      font-style: normal;
+    }
+
+    .closing-sig {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-style: italic;
+      color: var(--brown);
+      margin-bottom: 48px;
+    }
+
+    .closing-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background-color: var(--yellow);
+      color: var(--text-dark);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      padding: 18px 48px;
+      border-radius: 2px;
+      transition: all 0.3s;
+      text-transform: uppercase;
+    }
+
+    .closing-cta:hover {
+      background-color: var(--text-dark);
+      color: var(--white);
+    }
+
+    /* ===== NOTICE SECTION ===== */
+    .notice {
+      background-color: var(--white);
+      padding: 60px;
+      border-top: 1px solid var(--beige-dark);
+    }
+
+    .notice-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .notice-title {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--text-light);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .notice-list {
+      list-style: none;
+    }
+
+    .notice-list li {
+      font-size: 13px;
+      color: var(--text-light);
+      line-height: 1.8;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--beige);
+      display: flex;
+      gap: 12px;
+    }
+
+    .notice-list li::before {
+      content: '—';
+      color: var(--yellow);
+      flex-shrink: 0;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background-color: var(--text-dark);
+      padding: 60px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      color: var(--white);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .footer-tagline {
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 1px;
+      margin-bottom: 32px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      list-style: none;
+      margin-bottom: 32px;
+    }
+
+    .footer-links a {
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      letter-spacing: 1px;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--yellow);
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* ===== SCROLL REVEAL ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: all 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        padding: 80px 40px;
+      }
+
+      .hero-image-wrap {
+        display: none;
+      }
+
+      .intro-cards,
+      .why-grid,
+      .marketing-channels {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .site-header {
+        padding: 16px 24px;
+      }
+
+      .header-nav {
+        display: none;
+      }
+
+      .hero-title-en {
+        font-size: 48px;
+      }
+
+      .intro-cards,
+      .benefit-grid,
+      .why-grid,
+      .marketing-channels {
+        grid-template-columns: 1fr;
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .series-tabs {
+        gap: 8px;
+      }
+
+      .series-tab {
+        padding: 8px 16px;
+        font-size: 12px;
+      }
+
+      .marketing-timeline::before {
+        left: 20px;
+      }
+
+      .timeline-item {
+        grid-template-columns: 40px 1fr;
+      }
+
+      .timeline-item:nth-child(odd) .timeline-content,
+      .timeline-item:nth-child(even) .timeline-content {
+        grid-column: 2;
+        text-align: left;
+        padding-left: 24px;
+        padding-right: 0;
+      }
+
+      .timeline-item .timeline-empty {
+        display: none;
+      }
+
+      .timeline-dot {
+        grid-column: 1;
+      }
+
+      section {
+        padding: 80px 24px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="https://moonyamoonya.com" class="header-logo">
+      <svg class="logo-crown" viewBox="0 0 40 30" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 25 L5 10 L13 18 L20 5 L27 18 L35 10 L35 25 Z" fill="#F5C200" stroke="#F5C200" stroke-width="1" stroke-linejoin="round"/>
+        <rect x="5" y="25" width="30" height="4" rx="1" fill="#F5C200"/>
+      </svg>
+      <span class="logo-text">Moonya Moonya</span>
+    </a>
+    <ul class="header-nav">
+      <li><a href="#">26 Summer</a></li>
+      <li><a href="#">Classic</a></li>
+      <li><a href="#">Character</a></li>
+      <li><a href="#">Gift</a></li>
+      <li><a href="#">Acc</a></li>
+    </ul>
+    <span class="header-badge">5월 기획전 진행 중</span>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-deco-left"></div>
+    <div class="hero-deco-right"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <span class="hero-tag">May Family Month 2026</span>
+        <h1 class="hero-title-en">5월의<br><em>첫 포옹</em></h1>
+        <p class="hero-title-kr">Dear Family, 우리 가족의 가장 부드러운 순간을 위해</p>
+        <p class="hero-desc">
+          아이의 웃음소리가 세상에서 가장 소중한 보물입니다.<br>
+          무냐무냐는 40년의 철학으로 그 소중한 살결에<br>
+          가장 부드럽고 안전한 옷을 입혀왔습니다.<br>
+          이번 5월, 사랑하는 가족에게 무냐무냐를 선물하세요.
+        </p>
+        <div class="hero-period">
+          <span class="hero-period-label">Period</span>
+          <span class="hero-period-date">2026. 5. 1 (FRI) — 5. 31 (SUN)</span>
+        </div>
+        <a href="#products" class="hero-cta">
+          기획전 상품 보러가기
+          <span class="hero-cta-arrow">→</span>
+        </a>
+      </div>
+      <div class="hero-image-wrap">
+        <div class="hero-image-frame">
+          <img src="classic_hero_family.jpeg" alt="무냐무냐 가족 착용 이미지" onerror="this.style.background='linear-gradient(135deg, #F5EDD8, #E8D9B8)'; this.style.height='580px';">
+        </div>
+        <div class="hero-image-badge">
+          <div class="hero-image-badge-text">Family Collection</div>
+          <div class="hero-image-badge-sub">어린이날 · 어버이날 선물 추천</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="intro-inner">
+      <p class="section-label reveal">May Family Month</p>
+      <h2 class="section-title reveal">5월, 무냐무냐가<br><em>가족에게 전하는 말</em></h2>
+      <div class="section-divider reveal"></div>
+      <p class="intro-text reveal">
+        아이들은 금방 자라지만, 엄마가 입혀주던 옷의 부드러운 기억은 평생을 갑니다.<br>
+        어린이날, 어버이날, 그리고 가정의 달 — 5월의 모든 순간을<br>
+        무냐무냐의 포근함으로 채워보세요.
+      </p>
+      <div class="intro-cards">
+        <div class="intro-card reveal">
+          <div class="intro-card-icon">🌸</div>
+          <div class="intro-card-date">5 / 5</div>
+          <div class="intro-card-title">어린이날</div>
+          <div class="intro-card-desc">아이의 눈이 반짝이는 그 순간을 위해<br>가장 부드러운 선물을 준비하세요</div>
+        </div>
+        <div class="intro-card reveal">
+          <div class="intro-card-icon">💛</div>
+          <div class="intro-card-date">5 / 8</div>
+          <div class="intro-card-title">어버이날</div>
+          <div class="intro-card-desc">말 못 한 감사함을 담아<br>온 가족이 함께하는 패밀리 룩을 선물하세요</div>
+        </div>
+        <div class="intro-card reveal">
+          <div class="intro-card-icon">🏡</div>
+          <div class="intro-card-date">5월 전체</div>
+          <div class="intro-card-title">가정의 달</div>
+          <div class="intro-card-desc">온 가족이 함께하는 5월<br>무냐무냐로 가족의 유대감을 더욱 깊게</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFIT -->
+  <section class="benefit">
+    <div class="benefit-inner">
+      <div class="benefit-header">
+        <p class="section-label reveal">Special Benefit</p>
+        <h2 class="section-title reveal">가정의 달<br><em>특별 혜택</em></h2>
+        <div class="section-divider reveal"></div>
+      </div>
+      <div class="benefit-grid">
+        <div class="benefit-card reveal">
+          <div class="benefit-num">01</div>
+          <div class="benefit-content">
+            <span class="benefit-tag">Gift</span>
+            <h3 class="benefit-title">20만원 이상 구매 시<br>시그니처 기프트 증정</h3>
+            <p class="benefit-desc">무냐무냐의 스테디셀러 패턴을 담은 한정판 굿즈를 드립니다. 아이와 함께하는 모든 순간이 기록되길 바랍니다.</p>
+            <p class="benefit-detail">
+              구성: 오가닉 가제 손수건 3종 + 무냐 프리미엄 쇼핑백<br>
+              기간: 5/1 ~ 5/31 (한정 수량 소진 시 조기 종료)<br>
+              기준: 실결제 금액 20만원 이상
+            </p>
+          </div>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-num">02</div>
+          <div class="benefit-content">
+            <span class="benefit-tag">Free</span>
+            <h3 class="benefit-title">기프트세트 구매 시<br>무료 메시지 카드 + 리본 포장</h3>
+            <p class="benefit-desc">어린이날, 어버이날 선물로 딱 맞는 무냐무냐 기프트세트. 정성스러운 메시지 카드와 리본 포장을 무료로 제공합니다.</p>
+            <p class="benefit-detail">
+              대상: 기프트세트 전 상품<br>
+              포장 방식: 무냐무냐 시그니처 리본 + 메시지 카드<br>
+              별도 신청 없이 자동 적용
+            </p>
+          </div>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-num">03</div>
+          <div class="benefit-content">
+            <span class="benefit-tag">Discount</span>
+            <h3 class="benefit-title">패밀리 라인 구매 시<br>10% 추가 할인</h3>
+            <p class="benefit-desc">엄마와 아이가 함께 입는 패밀리 룩. 가정의 달에 온 가족이 함께하는 특별한 순간을 더욱 특별하게.</p>
+            <p class="benefit-detail">
+              대상: 패밀리 실크코튼 시리즈 전 상품<br>
+              할인: 정가 대비 10% 추가 할인<br>
+              쿠폰 코드: FAMILY0526
+            </p>
+          </div>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-num">04</div>
+          <div class="benefit-content">
+            <span class="benefit-tag">Delivery</span>
+            <h3 class="benefit-title">5/4(일) 자정까지 주문 시<br>어린이날 당일 배송 보장</h3>
+            <p class="benefit-desc">아이의 어린이날 아침을 무냐무냐로 시작하세요. 5월 4일 자정까지 주문하시면 어린이날 당일 배송을 보장합니다.</p>
+            <p class="benefit-detail">
+              주문 마감: 2026년 5월 4일(일) 자정<br>
+              배송 보장일: 2026년 5월 5일(월) 어린이날<br>
+              수도권 기준 (일부 지역 제외)
+            </p>
+          </div>
+        </div>
+        <div class="benefit-highlight reveal">
+          <p class="benefit-highlight-text">🎁 기획전 기간 내 구매 고객 전원 — 무냐무냐 공식 쇼핑백 무료 증정</p>
+          <p class="benefit-highlight-sub">5월 1일 ~ 5월 31일 | 온라인 공식몰 전용 혜택</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="products">
+    <div class="products-inner">
+      <div class="products-header">
+        <p class="section-label reveal">SERIES COLLECTION</p>
+        <h2 class="section-title reveal">5월 기획전<br><em>시리즈별 상품 모아보기</em></h2>
+        <div class="section-divider reveal"></div>
+      </div>
+
+      <!-- 탭 필터 -->
+      <div class="series-tabs reveal">
+        <button class="series-tab active" data-series="savanna">사바나화이트</button>
+        <button class="series-tab" data-series="crown">크라운우드랜드</button>
+        <button class="series-tab" data-series="blue">블루오션다이브</button>
+        <button class="series-tab" data-series="pink">핑크오션다이브</button>
+        <button class="series-tab" data-series="kids">Kids 반소매</button>
+        <button class="series-tab" data-series="modal">모달</button>
+        <button class="series-tab" data-series="injeon">인견</button>
+        <button class="series-tab" data-series="silk">실크모달</button>
+      </div>
+
+      <!-- 상품 그리드 -->
+      <div class="products-grid">
+
+        <!-- ① 사바나화이트 -->
+        <div class="series-panel active" data-panel="savanna">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMAABA02.jpg" alt="모달 사바나화이트 바디수트" loading="lazy">
+              <span class="product-badge new">26 Summer</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Baby · 모달</p>
+              <h3 class="product-name">모달 사바나화이트 바디수트</h3>
+              <span class="product-price">₩72,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMAMGD01.jpg" alt="모달 사바나화이트 민소매돌복" loading="lazy">
+              <span class="product-badge new">26 Summer</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Baby · 모달</p>
+              <h3 class="product-name">모달 사바나화이트 민소매돌복</h3>
+              <span class="product-price">₩89,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBMCM01.jpg" alt="아동 모달 사바나화이트 민소매내의" loading="lazy">
+              <span class="product-badge new">26 Summer</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 모달</p>
+              <h3 class="product-name">아동 모달 사바나화이트 민소매내의</h3>
+              <span class="product-price">₩87,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBFCM01.jpg" alt="아동 모달 사바나화이트프릴 민소매내의" loading="lazy">
+              <span class="product-badge new">26 Summer</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 모달</p>
+              <h3 class="product-name">아동 모달 사바나화이트프릴 민소매내의</h3>
+              <span class="product-price">₩98,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBMEC01.jpg" alt="아동 코튼리오셀 사바나퍼플 민소매잠옷" loading="lazy">
+              <span class="product-badge new">26 Summer</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 코튼리오셀</p>
+              <h3 class="product-name">아동 코튼리오셀 사바나퍼플 민소매잠옷</h3>
+              <span class="product-price">₩118,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMDMEF01.jpg" alt="코튼리오셀 사바나퍼플 반소매잠옷" loading="lazy">
+              <span class="product-badge new">26 Summer</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Adult · 코튼리오셀</p>
+              <h3 class="product-name">코튼리오셀 사바나퍼플 반소매잠옷</h3>
+              <span class="product-price">₩147,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MBKMBAHA02.jpg" alt="모달 사바나화이트 블랭킷" loading="lazy">
+              <span class="product-badge gift">Gift</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Acc · 모달</p>
+              <h3 class="product-name">모달 사바나화이트 블랭킷(80×115)</h3>
+              <span class="product-price">₩64,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MBKMAAGK02.jpg" alt="모달 사바나화이트 턱받이" loading="lazy">
+            </div>
+            <div class="product-info">
+              <p class="product-category">Acc · 모달</p>
+              <h3 class="product-name">모달 사바나화이트 턱받이</h3>
+              <span class="product-price">₩40,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ② 크라운우드랜드 -->
+        <div class="series-panel" data-panel="crown">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MBKMAAGY05.jpg" alt="모달 크라운우드랜드 배냇가운" loading="lazy">
+              <span class="product-badge gift">Best Gift</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Baby · 배냇가운</p>
+              <h3 class="product-name">모달 크라운우드랜드 배냇가운</h3>
+              <span class="product-price">₩72,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MBKMAAGY02.jpg" alt="모달 크라운우드랜드 기프트세트" loading="lazy">
+              <span class="product-badge gift">Gift Set</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Baby · 기프트세트</p>
+              <h3 class="product-name">모달 크라운우드랜드 기프트세트</h3>
+              <span class="product-price">₩135,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMAABA01.jpg" alt="모달 크라운우드랜드 바디수트" loading="lazy">
+              <span class="product-badge new">Classic</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Baby · 모달</p>
+              <h3 class="product-name">모달 크라운우드랜드 바디수트</h3>
+              <span class="product-price">₩74,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMAAGJ01.jpg" alt="모달 크라운우드랜드 우주복" loading="lazy">
+              <span class="product-badge new">Classic</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Baby · 모달</p>
+              <h3 class="product-name">모달 크라운우드랜드 우주복</h3>
+              <span class="product-price">₩75,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMAAGC01.jpg" alt="모달 크라운우드랜드 반소매돌복" loading="lazy">
+              <span class="product-badge new">Classic</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Baby · 모달</p>
+              <h3 class="product-name">모달 크라운우드랜드 반소매돌복</h3>
+              <span class="product-price">₩77,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/202603/097772d456ff62e42176ef523a3e049b.jpg" alt="아동 모달 크라운우드랜드 반소매내의" loading="lazy">
+              <span class="product-badge new">Classic</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 모달</p>
+              <h3 class="product-name">아동 모달 크라운우드랜드 반소매내의</h3>
+              <span class="product-price">₩81,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBFED01.jpg" alt="아동 모달 크라운우드랜드 원피스" loading="lazy">
+              <span class="product-badge new">Classic</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 모달</p>
+              <h3 class="product-name">아동 모달 크라운우드랜드 원피스</h3>
+              <span class="product-price">₩92,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MBKMBAHA01.jpg" alt="모달 크라운우드랜드 블랭킷" loading="lazy">
+              <span class="product-badge gift">Gift</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Acc · 모달</p>
+              <h3 class="product-name">모달 크라운우드랜드 블랭킷(80×115)</h3>
+              <span class="product-price">₩64,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ③ 블루오션다이브 -->
+        <div class="series-panel" data-panel="blue">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MBKMAMGY01.jpg" alt="실크모달 블루오션다이브 기프트세트" loading="lazy">
+              <span class="product-badge gift">Gift Set</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Baby · 실크모달</p>
+              <h3 class="product-name">실크모달 블루오션다이브 기프트세트</h3>
+              <span class="product-price">₩188,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBMEF01.jpg" alt="패밀리 실크코튼 블루오션다이브 반소매잠옷" loading="lazy">
+              <span class="product-badge family">Family</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Family · 실크코튼</p>
+              <h3 class="product-name">패밀리 실크코튼 블루오션다이브 반소매잠옷</h3>
+              <span class="product-price">₩237,000</span>
+              <span class="product-price-note">10% 할인</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBMAR01.jpg" alt="아동 실크모달 블루오션다이브 반소매내의" loading="lazy">
+              <span class="product-badge silk">Silk Modal</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 실크모달</p>
+              <h3 class="product-name">아동 실크모달 블루오션다이브 반소매내의</h3>
+              <span class="product-price">₩103,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MBKMBMAS01.jpg" alt="남아 실크모달 블루오션다이브 드로즈" loading="lazy">
+              <span class="product-badge silk">Silk Modal</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 실크모달</p>
+              <h3 class="product-name">남아 실크모달 블루오션다이브 드로즈</h3>
+              <span class="product-price">₩43,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBFAR03.jpg" alt="아동 코튼모달 블루자카드 반소매내의" loading="lazy">
+              <span class="product-badge new">26 Summer</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 코튼모달</p>
+              <h3 class="product-name">아동 코튼모달 블루자카드 반소매내의</h3>
+              <span class="product-price">₩83,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBMAR07.jpg" alt="아동 모달 블루워터파크 반소매내의" loading="lazy">
+              <span class="product-badge new">26 Summer</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 모달</p>
+              <h3 class="product-name">아동 모달 블루워터파크 반소매내의</h3>
+              <span class="product-price">₩77,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBMAR09.jpg" alt="아동 모달 정글어드벤처 반소매내의" loading="lazy">
+              <span class="product-badge new">26 Summer</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 모달</p>
+              <h3 class="product-name">아동 모달 정글어드벤처 반소매내의</h3>
+              <span class="product-price">₩77,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBMAR05.jpg" alt="아동 모달 우파루파아일랜드 반소매내의" loading="lazy">
+              <span class="product-badge new">26 Summer</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 모달</p>
+              <h3 class="product-name">아동 모달 우파루파아일랜드 반소매내의</h3>
+              <span class="product-price">₩77,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ④ 핑크오션다이브 -->
+        <div class="series-panel" data-panel="pink">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MBKMAFGY02.jpg" alt="실크모달 핑크오션다이브 배냇가운" loading="lazy">
+              <span class="product-badge gift">Gift</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Baby · 실크모달</p>
+              <h3 class="product-name">실크모달 핑크오션다이브 배냇가운</h3>
+              <span class="product-price">₩97,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MBKMAFGY01.jpg" alt="실크모달 핑크오션다이브 기프트세트" loading="lazy">
+              <span class="product-badge gift">Gift Set</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Baby · 실크모달</p>
+              <h3 class="product-name">실크모달 핑크오션다이브 기프트세트</h3>
+              <span class="product-price">₩188,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMAFGJ01.jpg" alt="실크모달 핑크오션다이브 우주복" loading="lazy">
+              <span class="product-badge silk">Silk Modal</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Baby · 실크모달</p>
+              <h3 class="product-name">실크모달 핑크오션다이브 우주복</h3>
+              <span class="product-price">₩104,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBFEF01.jpg" alt="패밀리 실크코튼 핑크오션다이브 반소매잠옷" loading="lazy">
+              <span class="product-badge family">Family</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Family · 실크코튼</p>
+              <h3 class="product-name">패밀리 실크코튼 핑크오션다이브 반소매잠옷</h3>
+              <span class="product-price">₩237,000</span>
+              <span class="product-price-note">10% 할인</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMDFCA01.jpg" alt="실크코튼 핑크오션다이브 원피스" loading="lazy">
+              <span class="product-badge silk">Silk Cotton</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Adult · 실크코튼</p>
+              <h3 class="product-name">실크코튼 핑크오션다이브 원피스</h3>
+              <span class="product-price">₩216,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MBKMBFAE03.jpg" alt="여아 실크모달 핑크오션다이브 팬티" loading="lazy">
+              <span class="product-badge silk">Silk Modal</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 실크모달</p>
+              <h3 class="product-name">여아 실크모달 핑크오션다이브 팬티</h3>
+              <span class="product-price">₩37,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBFAR11.jpg" alt="아동 모달 피치워터파크 반소매내의" loading="lazy">
+              <span class="product-badge new">26 Summer</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 모달</p>
+              <h3 class="product-name">아동 모달 피치워터파크 반소매내의</h3>
+              <span class="product-price">₩77,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBFAR09.jpg" alt="아동 모달 유니콘돌핀 반소매내의" loading="lazy">
+              <span class="product-badge new">26 Summer</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 모달</p>
+              <h3 class="product-name">아동 모달 유니콘돌핀 반소매내의</h3>
+              <span class="product-price">₩77,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ⑤ Kids 반소매 -->
+        <div class="series-panel" data-panel="kids">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/202603/097772d456ff62e42176ef523a3e049b.jpg" alt="아동 모달 크라운우드랜드 반소매내의" loading="lazy">
+              <span class="product-badge new">Best</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 모달</p>
+              <h3 class="product-name">아동 모달 크라운우드랜드 반소매내의</h3>
+              <span class="product-price">₩81,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBMCM01.jpg" alt="아동 모달 사바나화이트 민소매내의" loading="lazy">
+              <span class="product-badge new">26 Summer</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 모달</p>
+              <h3 class="product-name">아동 모달 사바나화이트 민소매내의</h3>
+              <span class="product-price">₩87,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBMAR01.jpg" alt="아동 실크모달 블루오션다이브 반소매내의" loading="lazy">
+              <span class="product-badge silk">Silk Modal</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 실크모달</p>
+              <h3 class="product-name">아동 실크모달 블루오션다이브 반소매내의</h3>
+              <span class="product-price">₩103,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBFAR03.jpg" alt="아동 코튼모달 블루자카드 반소매내의" loading="lazy">
+              <span class="product-badge new">26 Summer</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 코튼모달</p>
+              <h3 class="product-name">아동 코튼모달 블루자카드 반소매내의</h3>
+              <span class="product-price">₩83,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBFAR05.jpg" alt="아동 코튼모달 피치자카드 반소매내의" loading="lazy">
+              <span class="product-badge new">26 Summer</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 코튼모달</p>
+              <h3 class="product-name">아동 코튼모달 피치자카드 반소매내의</h3>
+              <span class="product-price">₩83,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBMAR05.jpg" alt="아동 모달 우파루파아일랜드 반소매내의" loading="lazy">
+              <span class="product-badge new">26 Summer</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 모달</p>
+              <h3 class="product-name">아동 모달 우파루파아일랜드 반소매내의</h3>
+              <span class="product-price">₩77,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBFAR09.jpg" alt="아동 모달 유니콘돌핀 반소매내의" loading="lazy">
+              <span class="product-badge new">26 Summer</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 모달</p>
+              <h3 class="product-name">아동 모달 유니콘돌핀 반소매내의</h3>
+              <span class="product-price">₩77,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/202604/66a6004e2bac869e3fdd28fad882ee31.jpg" alt="아동 모달 피콕페어리 반소매내의" loading="lazy">
+              <span class="product-badge new">26 Summer</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 모달</p>
+              <h3 class="product-name">아동 모달 피콕페어리 반소매내의</h3>
+              <span class="product-price">₩80,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ⑥ 모달 -->
+        <div class="series-panel" data-panel="modal">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MBKMAAGY05.jpg" alt="모달 크라운우드랜드 배냇가운" loading="lazy">
+              <span class="product-badge gift">Best Gift</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Baby · 모달</p>
+              <h3 class="product-name">모달 크라운우드랜드 배냇가운</h3>
+              <span class="product-price">₩72,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMAABA02.jpg" alt="모달 사바나화이트 바디수트" loading="lazy">
+              <span class="product-badge new">Classic</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Baby · 모달</p>
+              <h3 class="product-name">모달 사바나화이트 바디수트</h3>
+              <span class="product-price">₩72,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMAAGJ01.jpg" alt="모달 크라운우드랜드 우주복" loading="lazy">
+              <span class="product-badge new">Classic</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Baby · 모달</p>
+              <h3 class="product-name">모달 크라운우드랜드 우주복</h3>
+              <span class="product-price">₩75,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBMCM01.jpg" alt="아동 모달 사바나화이트 민소매내의" loading="lazy">
+              <span class="product-badge new">Classic</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 모달</p>
+              <h3 class="product-name">아동 모달 사바나화이트 민소매내의</h3>
+              <span class="product-price">₩87,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/202603/097772d456ff62e42176ef523a3e049b.jpg" alt="아동 모달 크라운우드랜드 반소매내의" loading="lazy">
+              <span class="product-badge new">Classic</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 모달</p>
+              <h3 class="product-name">아동 모달 크라운우드랜드 반소매내의</h3>
+              <span class="product-price">₩81,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBFED01.jpg" alt="아동 모달 크라운우드랜드 원피스" loading="lazy">
+              <span class="product-badge new">Classic</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 모달</p>
+              <h3 class="product-name">아동 모달 크라운우드랜드 원피스</h3>
+              <span class="product-price">₩92,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SPRING/MBKSAFGY01.jpg" alt="모달 핑크페가수스 기프트세트" loading="lazy">
+              <span class="product-badge gift">Gift</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Baby · 모달</p>
+              <h3 class="product-name">모달 핑크페가수스 기프트세트</h3>
+              <span class="product-price">₩135,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MBKMAAGY02.jpg" alt="모달 크라운우드랜드 기프트세트" loading="lazy">
+              <span class="product-badge gift">Gift</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Baby · 모달</p>
+              <h3 class="product-name">모달 크라운우드랜드 기프트세트</h3>
+              <span class="product-price">₩135,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ⑦ 인견 -->
+        <div class="series-panel" data-panel="injeon">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBMAR11.jpg" alt="아동 인견 다이노서퍼 반소매내의" loading="lazy">
+              <span class="product-badge new">26 Summer</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 인견</p>
+              <h3 class="product-name">아동 인견 다이노서퍼 반소매내의</h3>
+              <span class="product-price">₩77,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/202604/be6f10cdaf878d6a10366e7bc103d629.jpg" alt="아동 인견 머메이드돌핀 반소매내의" loading="lazy">
+              <span class="product-badge new">26 Summer</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 인견</p>
+              <h3 class="product-name">아동 인견 머메이드돌핀 반소매내의</h3>
+              <span class="product-price">₩78,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBAAR03.jpg" alt="아동 인견 애니멀프루츠 반소매내의" loading="lazy">
+              <span class="product-badge new">26 Summer</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 인견</p>
+              <h3 class="product-name">아동 인견 애니멀프루츠 반소매내의</h3>
+              <span class="product-price">₩77,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MBKMBMAE15.jpg" alt="남 인견 네이비솔리드 팬티" loading="lazy">
+            </div>
+            <div class="product-info">
+              <p class="product-category">Adult · 인견</p>
+              <h3 class="product-name">남 인견 네이비솔리드 팬티</h3>
+              <span class="product-price">₩22,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MBKMBMAS17.jpg" alt="남 인견 솔리드네이비 드로즈" loading="lazy">
+            </div>
+            <div class="product-info">
+              <p class="product-category">Adult · 인견</p>
+              <h3 class="product-name">남 인견 솔리드네이비 드로즈</h3>
+              <span class="product-price">₩32,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBMAR09.jpg" alt="아동 모달 정글어드벤처 반소매내의" loading="lazy">
+              <span class="product-badge new">26 Summer</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 인견 계열</p>
+              <h3 class="product-name">아동 모달 정글어드벤처 반소매내의</h3>
+              <span class="product-price">₩77,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBFAR14.jpg" alt="아동 모달 문릿프린세스 반소매내의" loading="lazy">
+              <span class="product-badge new">26 Summer</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 인견 계열</p>
+              <h3 class="product-name">아동 모달 문릿프린세스 반소매내의</h3>
+              <span class="product-price">₩83,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/202604/2814f787962eed7172a317a99bd9828c.jpg" alt="아동 모달 피콕페어리 원피스" loading="lazy">
+              <span class="product-badge new">26 Summer</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 인견 계열</p>
+              <h3 class="product-name">아동 모달 피콕페어리 원피스</h3>
+              <span class="product-price">₩89,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ⑧ 실크모달 -->
+        <div class="series-panel" data-panel="silk">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MBKMAMGY01.jpg" alt="실크모달 블루오션다이브 기프트세트" loading="lazy">
+              <span class="product-badge gift">Gift Set</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Baby · 실크모달</p>
+              <h3 class="product-name">실크모달 블루오션다이브 기프트세트</h3>
+              <span class="product-price">₩188,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MBKMAFGY01.jpg" alt="실크모달 핑크오션다이브 기프트세트" loading="lazy">
+              <span class="product-badge gift">Gift Set</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Baby · 실크모달</p>
+              <h3 class="product-name">실크모달 핑크오션다이브 기프트세트</h3>
+              <span class="product-price">₩188,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MBKMAFGY02.jpg" alt="실크모달 핑크오션다이브 배냇가운" loading="lazy">
+              <span class="product-badge silk">Silk Modal</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Baby · 실크모달</p>
+              <h3 class="product-name">실크모달 핑크오션다이브 배냇가운</h3>
+              <span class="product-price">₩97,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMAFGJ01.jpg" alt="실크모달 핑크오션다이브 우주복" loading="lazy">
+              <span class="product-badge silk">Silk Modal</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Baby · 실크모달</p>
+              <h3 class="product-name">실크모달 핑크오션다이브 우주복</h3>
+              <span class="product-price">₩104,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBMEF01.jpg" alt="패밀리 실크코튼 블루오션다이브 반소매잠옷" loading="lazy">
+              <span class="product-badge family">Family</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Family · 실크코튼</p>
+              <h3 class="product-name">패밀리 실크코튼 블루오션다이브 반소매잠옷</h3>
+              <span class="product-price">₩237,000</span>
+              <span class="product-price-note">10% 할인</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBFEF01.jpg" alt="패밀리 실크코튼 핑크오션다이브 반소매잠옷" loading="lazy">
+              <span class="product-badge family">Family</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Family · 실크코튼</p>
+              <h3 class="product-name">패밀리 실크코튼 핑크오션다이브 반소매잠옷</h3>
+              <span class="product-price">₩237,000</span>
+              <span class="product-price-note">10% 할인</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SUMMER/MDKMBMAR01.jpg" alt="아동 실크모달 블루오션다이브 반소매내의" loading="lazy">
+              <span class="product-badge silk">Silk Modal</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Kids · 실크모달</p>
+              <h3 class="product-name">아동 실크모달 블루오션다이브 반소매내의</h3>
+              <span class="product-price">₩103,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://moonyamoonya.com/web/product/big/26SPRING/MDKSAAGJ01.jpg" alt="실크모달 모네트M 우주복" loading="lazy">
+              <span class="product-badge silk">Silk Modal</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Baby · 실크모달</p>
+              <h3 class="product-name">실크모달 모네트M 우주복</h3>
+              <span class="product-price">₩98,000</span>
+              <a href="https://moonyamoonya.com" target="_blank" class="product-buy-btn">상품 보기</a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /products-grid -->
+    </div>
+  </section>
+
+  <!-- WHY MOONYA MOONYA -->
+  <section class="why">
+    <div class="why-inner">
+      <div class="why-header">
+        <p class="section-label reveal">Why Moonya Moonya</p>
+        <h2 class="section-title reveal">무냐무냐를 선택하는<br>세 가지 이유</h2>
+        <div class="section-divider reveal"></div>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-num">01</div>
+          <div class="why-icon">🌿</div>
+          <h3 class="why-title">40년의 철학,<br>자연에서 온 소재</h3>
+          <p class="why-desc">"영혼을 담은 옷을 만들자." 창업주의 약속 그대로, 모달·실크모달·코튼리오셀 등 자연에서 온 친환경 소재만을 사용합니다. 아이의 피부에 직접 닿는 옷이기에, 소재와 가공법 어느 하나 타협하지 않습니다.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-num">02</div>
+          <div class="why-icon">🎨</div>
+          <h3 class="why-title">시간이 지나도 변치 않는<br>클래식 수채화 패턴</h3>
+          <p class="why-desc">자연을 닮은 정교한 수채화 패턴은 아이의 시각적 감성을 자극하고, 입는 즐거움을 선사합니다. 크라운우드랜드, 오션다이브 등 무냐무냐만의 시그니처 패턴은 세월이 흘러도 변치 않는 고전적 아름다움을 담고 있습니다.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-num">03</div>
+          <div class="why-icon">👨‍👩‍👧‍👦</div>
+          <h3 class="why-title">온 가족이 함께하는<br>패밀리 라인</h3>
+          <p class="why-desc">아이부터 어른까지, 함께 입는 패밀리 룩은 우리 가족의 유대감을 더욱 깊게 만들어줍니다. 가정의 달 5월, 온 가족이 무냐무냐로 하나가 되는 특별한 순간을 만들어보세요.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARKETING PLAN -->
+  <section class="marketing">
+    <div class="marketing-inner">
+      <div class="marketing-header">
+        <p class="section-label reveal">Marketing Promotion Plan</p>
+        <h2 class="section-title reveal">5월 가정의 달<br><em>마케팅 프로모션 플랜</em></h2>
+        <div class="section-divider reveal"></div>
+        <p class="intro-text reveal" style="margin-top: 20px;">
+          기획전의 효과를 극대화하기 위한 채널별 통합 마케팅 전략입니다.<br>
+          어린이날·어버이날 전후로 집중 노출하여 구매 전환율을 높입니다.
+        </p>
+      </div>
+
+      <!-- Timeline -->
+      <div class="marketing-timeline">
+        <div class="timeline-item">
+          <div class="timeline-content reveal">
+            <div class="timeline-date">4월 28일 (화)</div>
+            <div class="timeline-title">기획전 사전 예고 & 얼리버드</div>
+            <div class="timeline-desc">이메일 뉴스레터 1차 발송 — 기획전 사전 예고 및 얼리버드 혜택 안내. 인플루언서 협업 콘텐츠 배포 시작. SNS 해시태그 이벤트 예고.</div>
+          </div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-empty"></div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-empty"></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content reveal">
+            <div class="timeline-date">5월 1일 (금)</div>
+            <div class="timeline-title">기획전 공식 오픈</div>
+            <div class="timeline-desc">이메일 뉴스레터 2차 발송 — 기획전 오픈 공지 및 에디터 픽 소개. 카카오톡 알림톡 발송. SNS 해시태그 이벤트 #무냐무냐가정의달 시작.</div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content reveal">
+            <div class="timeline-date">5월 3일 (토)</div>
+            <div class="timeline-title">네이버 쇼핑라이브 진행</div>
+            <div class="timeline-desc">오후 2시 라이브 커머스 — 가정의 달 기획전 상품 소개 및 라방 전용 5% 추가 할인 쿠폰 제공. 선착순 50명 사은품 증정.</div>
+          </div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-empty"></div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-empty"></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content reveal">
+            <div class="timeline-date">5월 4일 (일) 자정</div>
+            <div class="timeline-title">어린이날 배송 보장 마감</div>
+            <div class="timeline-desc">카카오톡 알림톡 D-1 발송 — "내일이 어린이날! 자정까지 주문하면 당일 배송 보장." 긴급 구매 유도.</div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content reveal">
+            <div class="timeline-date">5월 5일 (월) 어린이날</div>
+            <div class="timeline-title">어린이날 SNS 이벤트 피크</div>
+            <div class="timeline-desc">무냐무냐 착용 사진 SNS 공유 이벤트 집중 운영. 인플루언서 착용 콘텐츠 최대 노출. 네이버/카카오 선물하기 상위 노출 광고.</div>
+          </div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-empty"></div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-empty"></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content reveal">
+            <div class="timeline-date">5월 7일 (목)</div>
+            <div class="timeline-title">어버이날 배송 보장 마감</div>
+            <div class="timeline-desc">카카오톡 알림톡 발송 — "내일이 어버이날! 패밀리 룩으로 온 가족의 사랑을 전하세요." 어버이날 선물 막판 구매 유도.</div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content reveal">
+            <div class="timeline-date">5월 20일 (수)</div>
+            <div class="timeline-title">이메일 뉴스레터 3차 발송</div>
+            <div class="timeline-desc">마감 임박 알림 — 남은 재고 현황 안내 및 사은품 소진 임박 공지. 마지막 구매 기회 강조.</div>
+          </div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-empty"></div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-empty"></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content reveal">
+            <div class="timeline-date">5월 31일 (일)</div>
+            <div class="timeline-title">기획전 마감</div>
+            <div class="timeline-desc">기획전 종료 및 SNS 이벤트 당첨자 발표. 6월 여름 기획전 예고 콘텐츠 배포 시작.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Channels -->
+      <div class="marketing-channels">
+        <div class="channel-card reveal">
+          <div class="channel-icon">📱</div>
+          <h3 class="channel-title">SNS 캠페인</h3>
+          <p class="channel-desc">인스타그램·카카오스토리 해시태그 이벤트 #무냐무냐가정의달. 아이와 함께한 사진 업로드 시 추첨으로 기프트세트 증정. 육아 인플루언서 3~5명 협업 콘텐츠 제작.</p>
+          <span class="channel-kpi">예상 도달: 50만+ 노출</span>
+        </div>
+        <div class="channel-card reveal">
+          <div class="channel-icon">📧</div>
+          <h3 class="channel-title">이메일 & 알림톡</h3>
+          <p class="channel-desc">기획전 전·중·후 3회 이메일 뉴스레터 발송. 카카오톡 알림톡 D-7, D-1 발송으로 구매 타이밍 포착. 개인화 메시지로 재구매 고객 집중 공략.</p>
+          <span class="channel-kpi">오픈율 목표: 35%+</span>
+        </div>
+        <div class="channel-card reveal">
+          <div class="channel-icon">📺</div>
+          <h3 class="channel-title">라이브 커머스</h3>
+          <p class="channel-desc">5/3(토) 오후 2시 네이버 쇼핑라이브 진행. 가정의 달 기획전 상품 소개 및 라방 전용 5% 추가 할인 쿠폰. 선착순 50명 사은품 증정으로 긴급 구매 유도.</p>
+          <span class="channel-kpi">목표 시청자: 3,000+</span>
+        </div>
+        <div class="channel-card reveal">
+          <div class="channel-icon">🛒</div>
+          <h3 class="channel-title">쇼핑 플랫폼 연동</h3>
+          <p class="channel-desc">네이버 쇼핑 어린이날·어버이날 카테고리 상위 노출 광고. 카카오 선물하기 입점 상품 기획전 배너 게재. 검색 광고 키워드: "어린이날 선물", "아기 선물".</p>
+          <span class="channel-kpi">ROAS 목표: 500%+</span>
+        </div>
+        <div class="channel-card reveal">
+          <div class="channel-icon">🤝</div>
+          <h3 class="channel-title">인플루언서 협업</h3>
+          <p class="channel-desc">팔로워 5만~20만 육아 인플루언서 3~5명 협업. 패밀리 룩 착용 콘텐츠 제작 및 배포. 4/28~5/10 집중 노출로 어린이날·어버이날 구매 전환.</p>
+          <span class="channel-kpi">협업 인원: 3~5명</span>
+        </div>
+        <div class="channel-card reveal">
+          <div class="channel-icon">🎁</div>
+          <h3 class="channel-title">CRM 개인화 마케팅</h3>
+          <p class="channel-desc">기존 구매 고객 대상 VIP 전용 사전 알림. 구매 이력 기반 맞춤 상품 추천. 휴면 고객 복귀 쿠폰 발송으로 재구매 유도.</p>
+          <span class="channel-kpi">재구매율 목표: 30%+</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing">
+    <div class="closing-inner">
+      <p class="closing-from reveal">From. Moonya Moonya</p>
+      <p class="closing-quote reveal">
+        "아이들은 금방 자라지만,<br>
+        엄마가 입혀주던 옷의 <em>부드러운 기억</em>은 평생을 갑니다.<br><br>
+        이번 5월, 무냐무냐로<br>
+        아이의 기억 속에 <em>포근한 사랑</em>을 새겨주세요."
+      </p>
+      <p class="closing-sig reveal">Moonya Moonya</p>
+      <a href="https://moonyamoonya.com/list/gift.html" class="closing-cta reveal">
+        지금 선물 고르러 가기 →
+      </a>
+    </div>
+  </section>
+
+  <!-- NOTICE -->
+  <section class="notice">
+    <div class="notice-inner">
+      <p class="notice-title">이벤트 유의사항</p>
+      <ul class="notice-list">
+        <li>사은품은 결제 순서대로 증정되며, 재고 소진 시 별도 안내 없이 조기 종료될 수 있습니다.</li>
+        <li>반품 시 증정된 사은품도 함께 동봉해 주셔야 환불이 가능합니다.</li>
+        <li>본 이벤트는 온라인 공식몰 전용 혜택으로, 오프라인 플래그십 스토어에서는 적용되지 않습니다.</li>
+        <li>패밀리 라인 10% 추가 할인은 쿠폰 코드(FAMILY0526) 입력 시 적용됩니다.</li>
+        <li>5/5 어린이날 당일 배송은 5/4(일) 자정까지 주문 완료된 건에 한하며, 수도권 일부 지역 제외입니다.</li>
+        <li>라이브 커머스 전용 쿠폰은 방송 중에만 사용 가능하며, 방송 종료 후 자동 만료됩니다.</li>
+        <li>SNS 이벤트 당첨자 발표는 5/31 이후 공식 인스타그램 계정을 통해 공지됩니다.</li>
+        <li>기타 문의사항은 고객센터(070-8655-2378) 또는 1:1 문의를 이용해 주세요.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">Moonya Moonya</div>
+    <p class="footer-tagline">가족의 따뜻한 순간을 채우다</p>
+    <ul class="footer-links">
+      <li><a href="#">이용약관</a></li>
+      <li><a href="#">개인정보처리방침</a></li>
+      <li><a href="#">공지사항</a></li>
+      <li><a href="#">1:1 문의</a></li>
+      <li><a href="#">멤버십</a></li>
+    </ul>
+    <p class="footer-copy">㈜GBSTYLE | 서울특별시 강남구 선릉로161길 17 3층 | © 2026 GBSTYLE. ALL RIGHTS RESERVED.</p>
+  </footer>
+
+  <script>
+    // Tab Filter
+    const tabs = document.querySelectorAll('.series-tab');
+    const panels = document.querySelectorAll('.series-panel');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.series;
+
+        // 탭 활성화
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        // 패널 표시
+        panels.forEach(panel => {
+          if (panel.dataset.panel === target) {
+            panel.classList.add('active');
+          } else {
+            panel.classList.remove('active');
+          }
+        });
+      });
+    });
+
+    // Scroll Reveal
+    const revealElements = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    revealElements.forEach(el => observer.observe(el));
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
